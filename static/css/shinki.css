@@ -1,0 +1,24 @@
+body {
+    background: -moz-linear-gradient(top, aqua, black);
+    background: -webkit-linear-gradient(top, aqua, black);
+    background: linear-gradient(to bottom, aqua, black);
+    margin: 0 auto;
+    font-size: 300%;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.takasa {
+    height: 40px;
+    width: 300px;
+}
+
+form {
+    display: inline-block;
+}
+
+input{
+    width: 100px;
+    height: 50px;
+}
+

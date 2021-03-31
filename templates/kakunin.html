@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/shinki.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon1.ico')}}">
+    <title>確認画面</title>
+</head>
+<body>
+    <h3>この登録でよろしいですか？</h3>
+    <form action="{{url_for('get')}}" method="post">
+        メール:<input type="email" name="mail" value={{mail}} readonly><br>
+        パスワード:<input type="password" name="pw" value={{pw}} readonly><br>
+        住所:<input type="text" name="jyusyo" value={{jyusyo}} readonly><br>
+        電話番号:<input type="tel" name="tel" value={{tel}} readonly><br>
+        氏名:<input type="text" name="name" value={{name}} readonly><br>
+        生年月日:<input type="text" name="age" value={{age}} readonly><br>
+        <input type="submit" value="OK">
+    </form>
+    <form action="{{url_for('shinki')}}">
+        <input type="submit" value="戻る">
+    </form>
+</body>
+</html>

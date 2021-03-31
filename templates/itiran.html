@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <p>※画像をクリックすると商品詳細ページに行くことができます</p>
+    <body>
+        <a href="{{url_for('syousai',syohinId=1)}}"><img src="{{url_for('static', filename='images/wa.png')}}" alt="画像"></a>
+        <a href="{{url_for('syousai',syohinId=2)}}"><img src="{{url_for('static', filename='images/sai.png')}}" alt="画像"></a>
+        <a href="{{url_for('syousai',syohinId=3)}}"><img src="{{url_for('static', filename='images/zu.png')}}" alt="画像"></a>
+        <a href="{{url_for('syousai',syohinId=4)}}"><img src="{{url_for('static', filename='images/unrav.png')}}" alt="画像"></a><br>
+        <a href="{{url_for('syousai',syohinId=5)}}"><img src="{{url_for('static', filename='images/an.png')}}" alt="画像"></a>
+        <a href="{{url_for('syousai',syohinId=6)}}"><img src="{{url_for('static', filename='images/mjyo.png')}}" alt="画像"></a>
+    </body>
+{% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/shinki.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon1.ico')}}">
+    <title>ログイン</title>
+</head>
+<body>
+    <h3>ログイン画面</h3>
+    <form action="{{url_for('home')}}" method="post">
+        メール:<input class="takasa" type="email" name="mail" required><br>
+        PW:<input class="takasa" type="password" name="pw" required><br>
+        <input type="submit" value="ログイン">
+    </form>
+    <form action="{{url_for('top')}}">
+        <input type="submit" value="戻る">
+    </form>
+</body>
+</html>

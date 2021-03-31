@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: -moz-linear-gradient(top, white, black);
+    background: -webkit-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white,black);
+    text-align: center;
+    height: 100%;
+    min-height: 100vh;
+
+
+}
+
+header {
+    height: 10%;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: black;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+nav ul li {
+    list-style: none;
+    width: 33%;
+    text-align: center;
+    margin: 2px;
+    background: aqua;
+}
+
+main {
+    min-height: 85%;
+}
+
+footer {
+    background: black;
+    height: 5%;
+}
+
+#copyright {
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    color:rgb(182, 1, 253);
+}
+
+.moji{
+    font-size: 40px;
+}
+
+.mojimoji {
+    font-size: 20px;
+}
+
+p {
+    color: black;
+}
+
+form {
+    color: white;
+}
+
+.cp_cssslider {
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+	margin: 2em auto;
+	border: 10px solid #ffffff;
+	box-shadow:0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.cp_slide_item {
+	width: 300px;
+	height: 200px;
+	float: left;
+	position: relative;
+}

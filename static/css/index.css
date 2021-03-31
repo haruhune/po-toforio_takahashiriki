@@ -1,0 +1,13 @@
+body {
+    background: -moz-linear-gradient(top, aqua, black);
+    background: -webkit-linear-gradient(top, aqua, black);
+    background: linear-gradient(to bottom, aqua, black);
+    margin: 0 auto;
+    font-size: 100%;
+    text-align: center;
+    min-height: 100vh;
+}
+
+form {
+    display: inline-block;
+}

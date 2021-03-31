@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>詳細ページ</title>
+</head>
+<body>
+    <img src="{{url_for('static', filename= 'images/'+img)}}" alt="画像">
+    <p>アーティスト名:{{Artist}}</p>
+    <p>曲名:{{cdname}}</p>
+    <form action="{{url_for('add')}}">
+        <input type="submit" value=￥{{nedan}}>
+        <input type="hidden" name=Artist value={{Artist}}>
+        <input type="hidden" name=cdname value={{cdname}}>
+        <input type="hidden" name=nedan value={{nedan}}>
+    </form>
+    {% if checkbgm != None %}
+        <audio src="{{url_for('static', filename='audio/'+bgm)}}" autoplay loop>音楽サンプル</audio>
+        <form action="{{url_for('syousai')}}">
+            <input type="hidden" name="syohinId" value="{{syohinId}}">
+            <input type="submit" value="停止">
+        </form>
+    {% else %}
+        <form action="{{url_for('checkbgm')}}">
+            <input type="hidden" name="syohinId" value="{{syohinId}}">
+            <input type="submit" value="再生">
+        </form>
+    {% endif %}
+
+    <form action="{{url_for('home_get')}}">
+        <input type="submit" value="戻る">
+    </form>
+</body>
+</html>

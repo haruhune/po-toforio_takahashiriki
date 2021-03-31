@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/shinki.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon1.ico')}}">
+    <title>新規登録</title>
+</head>
+<body>
+    {% if error != None %}
+    <div style="color: red;">{{error}}</div>
+    {% endif %}
+    <h3>新規登録画面</h3>
+    <form action="{{url_for('kakunin')}}" method="post">
+        メール:<input class="takasa" type="email" name="mail" placeholder="例：xxx@morijyobi.ac.jp" required><br>
+        PW:<input class="takasa" type="password" name="pw" id="sa" required><br>
+        <label>パスワードを表示<input class="takasa" type="checkbox" name="ka" id="ko"></label><br>
+        氏名:<input class="takasa" type="text" name="name" placeholder="例：モリジョビジョビ" required><br>
+        住所:<input class="takasa" type="text" name="jyusyo" placeholder="例：xxxx.yyyy@morijyobi" required><br>
+        電話番号:<input class="takasa" type="tel" name="tel" placeholder="例：012-3456-7890" required><br>
+        生年月日:<input class="takasa" type="text" name="age" placeholder="例：xxxx/yy/zz" required><br>
+        <input type="submit" value="登録"> 
+    </form>
+    <form action="{{url_for('top')}}">
+        <input type="submit" value="戻る">
+    </form>
+
+    <script>
+        const pwd=document.getElementById("sa");
+        const pwdCheck = document.getElementById("ko")
+        pwdCheck.addEventListener('change', function() {
+            if(pwdCheck.checked) {
+                pwd.setAttribute('type', 'text');
+            } else {
+                pwd.setAttribute('type', 'password');
+            }
+        }, false);
+    </script>
+
+</body>
+</html>
+
+

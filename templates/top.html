@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/top.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon1.ico')}}">
+    <title>musicTOWN</title>
+</head>
+
+<body>
+    <h3>musicTOWN</h3>
+    <form action="{{url_for('shinki')}}">
+        <input type="submit" value="新規登録">
+    </form>
+    <form action="{{url_for('top_page')}}">
+        <input type="submit" value="ログイン">
+    </form>
+</body>
+</html>

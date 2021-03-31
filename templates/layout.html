@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='favicon/favicon1.ico')}}">
+    <title>musicTOWN</title>
+</head>
+<body>
+    <header>
+        
+        <form action="{{url_for('kensakugo')}}">
+            <span style="color: rgb(241, 14, 204);">musicTOWN</span>
+            <input type="text" name="kensaku">
+            <input type="submit" value="🔎">
+        </form>
+        <nav>
+            <ul>
+                <li> <a href="{{url_for('home_get')}}">トップ</a></li>
+                <li> <a href="{{url_for('cart_list')}}">カートの中身確認</a></li>
+                <li> <a href="{{url_for('logout')}}">ログアウト</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    {% block content %}
+    <!-- ページごとにコンテンツを埋め込む -->
+    {% endblock %}
+    </main>
+
+    <footer>
+        <div id="copyright">
+            <small>&copy;2021　　musicTOWN　　</small>
+        </div>
+    </footer>
+</body>
+</html>
